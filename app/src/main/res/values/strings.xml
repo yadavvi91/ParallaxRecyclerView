@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">ParallaxRecylcerView</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="parallax">Parallax</string>
+    <string name="round_robin">Round Robin</string>
+    <string name="elimination">Elimination</string>
+
+    <string name="afg">Afghanistan</string>
+    <string name="aus">Australia</string>
+    <string name="ban">Bangladesh</string>
+    <string name="eng">England</string>
+    <string name="ind">India</string>
+    <string name="ire">Ireland</string>
+    <string name="nz">New Zealand</string>
+    <string name="pak">Pakistan</string>
+    <string name="sco">Scotland</string>
+    <string name="saf">South Africa</string>
+    <string name="sri">Sri Lanka</string>
+    <string name="uae">UAE</string>
+    <string name="wid">West Indies</string>
+    <string name="zim">Zimbabwe</string>
+
+    <string-array name="countries">
+        <item>@string/afg</item>
+        <item>@string/aus</item>
+        <item>@string/ban</item>
+        <item>@string/eng</item>
+        <item>@string/ind</item>
+        <item>@string/ire</item>
+        <item>@string/nz</item>
+        <item>@string/pak</item>
+        <item>@string/sco</item>
+        <item>@string/saf</item>
+        <item>@string/sri</item>
+        <item>@string/uae</item>
+        <item>@string/wid</item>
+        <item>@string/zim</item>
+    </string-array>
+
+    <string-array name="dates">
+        <item>14/02/15</item>
+        <item>14/02/15</item>
+        <item>15/02/15</item>
+        <item>15/02/15</item>
+        <item>16/02/15</item>
+        <item>17/02/15</item>
+        <item>18/02/15</item>
+        <item>19/02/15</item>
+        <item>20/02/15</item>
+        <item>21/02/15</item>
+        <item>21/02/15</item>
+        <item>22/02/15</item>
+        <item>22/02/15</item>
+        <item>23/02/15</item>
+        <item>24/02/15</item>
+        <item>25/02/15</item>
+        <item>26/02/15</item>
+        <item>26/02/15</item>
+        <item>27/02/15</item>
+        <item>28/02/15</item>
+        <item>28/02/15</item>
+        <item>01/03/15</item>
+        <item>01/03/15</item>
+        <item>03/03/15</item>
+        <item>04/03/15</item>
+        <item>04/03/15</item>
+        <item>05/03/15</item>
+        <item>06/03/15</item>
+        <item>07/03/15</item>
+        <item>07/03/15</item>
+        <item>08/03/15</item>
+        <item>08/03/15</item>
+        <item>09/03/15</item>
+        <item>10/03/15</item>
+        <item>11/03/15</item>
+        <item>12/03/15</item>
+        <item>13/03/15</item>
+        <item>13/03/15</item>
+        <item>14/03/15</item>
+        <item>14/03/15</item>
+        <item>15/03/15</item>
+        <item>15/03/15</item>
+        <item>18/03/15</item>
+        <item>19/03/15</item>
+        <item>20/03/15</item>
+        <item>21/03/15</item>
+        <item>24/03/15</item>
+        <item>26/03/15</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="match">
+
+    </array>
+
+    <array name="team1">
+        <item>England</item>
+        <item>Sri Lanka</item>
+        <item>India</item>
+        <item>South Africa</item>
+        <item>West Indies</item>
+        <item>New Zealand</item>
+        <item>Bangladesh</item>
+        <item>Zimbabwe</item>
+        <item>New Zealand</item>
+        <item>Australia</item>
+        <item>Pakistan</item>
+        <item>Sri Lanka</item>
+        <item>South Africa</item>
+        <item>England</item>
+        <item>West Indies</item>
+        <item>Ireland</item>
+        <item>Sri Lanka</item>
+        <item>Afghanistan</item>
+        <item>South Africa</item>
+        <item>Australia</item>
+        <item>India</item>
+        <item>England</item>
+        <item>Pakistan</item>
+        <item>South Africa</item>
+        <item>Australia</item>
+        <item>Pakistan</item>
+        <item>Bangladesh</item>
+        <item>India</item>
+        <item>Zimbabwe</item>
+        <item>South Africa</item>
+        <item>New Zealand</item>
+        <item>Australia</item>
+        <item>England</item>
+        <item>India</item>
+        <item>Sri Lanka</item>
+        <item>South Africa</item>
+        <item>England</item>
+        <item>Bangladesh</item>
+        <item>Australia</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>West Indies</item>
+        <item>Sri Lanka</item>
+        <item>Bangladesh</item>
+        <item>Australia</item>
+        <item>New Zealand</item>
+        <item>New Zealand</item>
+        <item>Australia</item>
+    </array>
+
+    <array name="team2">
+        <item>Australia</item>
+        <item>New Zealand</item>
+        <item>Pakistan</item>
+        <item>Zimbabwe</item>
+        <item>Ireland</item>
+        <item>Scotland</item>
+        <item>Afghanistan</item>
+        <item>UAE</item>
+        <item>England</item>
+        <item>Bangladesh</item>
+        <item>West Indies</item>
+        <item>Afghanistan</item>
+        <item>India</item>
+        <item>Scotland</item>
+        <item>Zimbabwe</item>
+        <item>UAE</item>
+        <item>Bangladesh</item>
+        <item>Scotland</item>
+        <item>West Indies</item>
+        <item>New Zealand</item>
+        <item>UAE</item>
+        <item>Sri Lanka</item>
+        <item>Zimbabwe</item>
+        <item>Ireland</item>
+        <item>Afghanistan</item>
+        <item>UAE</item>
+        <item>Scotland</item>
+        <item>West Indies</item>
+        <item>Ireland</item>
+        <item>Pakistan</item>
+        <item>Afghanistan</item>
+        <item>Sri Lanka</item>
+        <item>Bangladesh</item>
+        <item>Ireland</item>
+        <item>Scotland</item>
+        <item>UAE</item>
+        <item>Afghanistan</item>
+        <item>New Zealand</item>
+        <item>Scotland</item>
+        <item>Zimbabwe</item>
+        <item>Ireland</item>
+        <item>UAE</item>
+        <item>South Africa</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>West Indies</item>
+        <item>South Africa</item>
+        <item>India</item>
+    </array>
+
+    <array name="team1scores">
+        <item>231</item>
+        <item>233</item>
+        <item>300</item>
+        <item>339</item>
+        <item>304</item>
+        <item>146</item>
+        <item>267</item>
+        <item>286</item>
+        <item>125</item>
+        <item>0</item>
+        <item>160</item>
+        <item>236</item>
+        <item>177</item>
+        <item>303</item>
+        <item>372</item>
+        <item>279</item>
+        <item>332</item>
+        <item>211</item>
+        <item>408</item>
+        <item>151</item>
+        <item>104</item>
+        <item>309</item>
+        <item>235</item>
+        <item>411</item>
+        <item>417</item>
+        <item>339</item>
+        <item>322</item>
+        <item>185</item>
+        <item>326</item>
+        <item>202</item>
+        <item>188</item>
+        <item>376</item>
+        <item>260</item>
+        <item>260</item>
+        <item>363</item>
+        <item>341</item>
+        <item>101</item>
+        <item>288</item>
+        <item>133</item>
+        <item>288</item>
+        <item>241</item>
+        <item>176</item>
+        <item>133</item>
+        <item>193</item>
+        <item>216</item>
+        <item>393</item>
+        <item>299</item>
+        <item>328</item>
+    </array>
+
+    <array name="team2scores">
+        <item>342</item>
+        <item>331</item>
+        <item>224</item>
+        <item>277</item>
+        <item>307</item>
+        <item>142</item>
+        <item>162</item>
+        <item>285</item>
+        <item>123</item>
+        <item>0</item>
+        <item>310</item>
+        <item>232</item>
+        <item>307</item>
+        <item>184</item>
+        <item>289</item>
+        <item>278</item>
+        <item>240</item>
+        <item>210</item>
+        <item>151</item>
+        <item>152</item>
+        <item>102</item>
+        <item>312</item>
+        <item>217</item>
+        <item>210</item>
+        <item>142</item>
+        <item>210</item>
+        <item>318</item>
+        <item>182</item>
+        <item>331</item>
+        <item>222</item>
+        <item>186</item>
+        <item>312</item>
+        <item>275</item>
+        <item>259</item>
+        <item>215</item>
+        <item>195</item>
+        <item>111</item>
+        <item>290</item>
+        <item>130</item>
+        <item>287</item>
+        <item>237</item>
+        <item>175</item>
+        <item>134</item>
+        <item>302</item>
+        <item>213</item>
+        <item>250</item>
+        <item>281</item>
+        <item>233</item>
+    </array>
+
+    <array name="team1overs">
+
+    </array>
+
+    <array name="team2overs">
+
+    </array>
+
+    <array name="matchwinners">
+        <item>Australia</item>
+        <item>New Zealand</item>
+        <item>India</item>
+        <item>South Africa</item>
+        <item>Ireland</item>
+        <item>New Zealand</item>
+        <item>Bangladesh</item>
+        <item>Zimbabwe</item>
+        <item>New Zealand</item>
+        <item>Match</item>
+        <item>West Indies</item>
+        <item>Sri Lanka</item>
+        <item>India</item>
+        <item>England</item>
+        <item>West Indies</item>
+        <item>Ireland</item>
+        <item>Sri Lanka</item>
+        <item>Afghanistan</item>
+        <item>South Africa</item>
+        <item>New Zealand</item>
+        <item>India</item>
+        <item>Sri Lanka</item>
+        <item>Pakistan</item>
+        <item>South Africa</item>
+        <item>Australia</item>
+        <item>Pakistan</item>
+        <item>Bangladesh</item>
+        <item>India</item>
+        <item>Ireland</item>
+        <item>Pakistan</item>
+        <item>New Zealand</item>
+        <item>Australia</item>
+        <item>Bangladesh</item>
+        <item>India</item>
+        <item>Sri Lanka</item>
+        <item>South Africa</item>
+        <item>New Zealand</item>
+        <item>Australia</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>West Indies</item>
+        <item>South Africa</item>
+        <item>India</item>
+        <item>Australia</item>
+        <item>New Zealand</item>
+        <item>New Zealand</item>
+        <item>Australia</item>
+    </array>
+</resources>
