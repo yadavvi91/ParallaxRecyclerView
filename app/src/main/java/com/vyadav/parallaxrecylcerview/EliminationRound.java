@@ -4,9 +4,28 @@ package com.vyadav.parallaxrecylcerview;
  * Created by vyadav on 24/3/15.
  */
 public class EliminationRound implements Matches {
-    @Override
-    public void setTeams(String[] teams) {
+    String team1, team2;
+    String winnerTeam;
+    int team1Score, team2Score;
+    boolean isDrawn;
 
+    @Override
+    public void setTeams(String team1, String team2) {
+
+    }
+
+    @Override
+    public void setTeamScores(int team1Score, int team2Score) {
+        this.team1Score = team1Score;
+
+    }
+
+    @Override
+    public void setWinner(String winner) {
+        if (winner == null || winner.equalsIgnoreCase("")) {
+            isDrawn = true;
+        }
+        this.winnerTeam = winner;
     }
 
     @Override
@@ -21,11 +40,16 @@ public class EliminationRound implements Matches {
 
     @Override
     public String getWinningTeam() {
-        return null;
+        return winnerTeam;
     }
 
     @Override
     public boolean isDrawnOrAbandoned() {
-        return false;
+        return isDrawn;
+    }
+
+    @Override
+    public String toString() {
+        return "Winner: " + winnerTeam;
     }
 }

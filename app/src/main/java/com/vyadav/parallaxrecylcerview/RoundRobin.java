@@ -19,12 +19,18 @@ public class RoundRobin implements Matches {
     }
 
     @Override
-    public void setTeams(String[] teams) {
-        if (teams.length == 2) {
-            this.teams = teams;
-        } else {
-            throw new IllegalArgumentException("Every Match must have 2 teams");
-        }
+    public void setTeams(String team1, String team2) {
+
+    }
+
+    @Override
+    public void setTeamScores(int team1Score, int team2Score) {
+
+    }
+
+    @Override
+    public void setWinner(String s) {
+
     }
 
     @Override

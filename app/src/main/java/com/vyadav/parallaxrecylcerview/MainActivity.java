@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.poliveira.parallaxrecycleradapter.ParallaxRecyclerAdapter;
 
@@ -20,6 +22,7 @@ import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
+    private static final String TAG = "ParallaxRecycller";
     private RecyclerView mRecyclerView;
     private Toolbar mToolbar;
 
@@ -32,6 +35,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle(getString(R.string.parallax));
         setSupportActionBar(mToolbar);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
@@ -50,17 +54,25 @@ public class MainActivity extends ActionBarActivity {
 
             @Override
             public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
-
+                Log.i(TAG, adapter.getData().get(i).toString());
+                Log.i(TAG, adapter.getData().get(i)
+                        .getWinningTeam());
+                if (viewHolder == null)
+                    Log.i(TAG, "Fuck you");
+                if (((ListViewHolder)viewHolder).mTextView == null)
+                    Log.i(TAG, "Fuck you twice");
+                ((ListViewHolder) viewHolder).mTextView.setText(adapter.getData().get(i)
+                        .getWinningTeam());
             }
 
             @Override
             public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-                return null;
+                return new ListViewHolder(getLayoutInflater().inflate(R.layout.single_item_row, viewGroup, false));
             }
 
             @Override
             public int getItemCount() {
-                return 0;
+                return adapter.getData().size();
             }
 
             @Override
@@ -80,6 +92,21 @@ public class MainActivity extends ActionBarActivity {
 
     private List<EliminationRound> populateEliminationRoundMatches() {
         List<EliminationRound> eliminationRoundsList = new ArrayList<>();
+
+        String[] team1 = getResources().getStringArray(R.array.team1);
+        String[] team2 = getResources().getStringArray(R.array.team2);
+        int[] team1Scores = getResources().getIntArray(R.array.team1scores);
+        int[] team2Scores = getResources().getIntArray(R.array.team2scores);
+        String[] winningTeam = getResources().getStringArray(R.array.matchwinners);
+
+        for (int i = 0; i < team1.length; i++) {
+            EliminationRound elimMatch = new EliminationRound();
+            elimMatch.setTeams(team1[i], team2[i]);
+            elimMatch.setTeamScores(team1Scores[i], team2Scores[i]);
+            elimMatch.setWinner(winningTeam[i]);
+
+            eliminationRoundsList.add(elimMatch);
+        }
         return eliminationRoundsList;
     }
 
@@ -104,14 +131,24 @@ public class MainActivity extends ActionBarActivity {
 
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         if (id == R.id.type_of_matches) {
             item.setTitle(item.getTitle().toString().equalsIgnoreCase(getString(R.string
                     .round_robin)) ? R.string.elimination : R.string.round_robin);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    class ListViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView mTextView;
+
+        public ListViewHolder(View itemView) {
+            super(itemView);
+            mTextView = (TextView) findViewById(R.id.single_row_text);
+        }
     }
 }
