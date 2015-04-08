@@ -22,7 +22,7 @@ import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
-    private static final String TAG = "ParallaxRecycller";
+    private static final String TAG = "ParallaxRecycler";
     private RecyclerView mRecyclerView;
     private Toolbar mToolbar;
 
@@ -35,7 +35,6 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setTitle(getString(R.string.parallax));
         setSupportActionBar(mToolbar);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
@@ -44,8 +43,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void createAdapter(RecyclerView mRecyclerView) {
-        final ParallaxRecyclerAdapter<Matches> adapter = new ParallaxRecyclerAdapter<>
-                ((List<Matches>) mDataSet);
+        final ParallaxRecyclerAdapter<Matches> adapter = new ParallaxRecyclerAdapter<>(mDataSet);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         View header = getLayoutInflater().inflate(R.layout.header, mRecyclerView, false);
         adapter.setParallaxHeader(header, mRecyclerView);
@@ -53,21 +51,26 @@ public class MainActivity extends ActionBarActivity {
                 .RecyclerAdapterMethods() {
 
             @Override
-            public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
-                Log.i(TAG, adapter.getData().get(i).toString());
-                Log.i(TAG, adapter.getData().get(i)
-                        .getWinningTeam());
-                if (viewHolder == null)
-                    Log.i(TAG, "Fuck you");
-                if (((ListViewHolder)viewHolder).mTextView == null)
-                    Log.i(TAG, "Fuck you twice");
-                ((ListViewHolder) viewHolder).mTextView.setText(adapter.getData().get(i)
-                        .getWinningTeam());
+            public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+                Log.i(TAG, adapter.getData().get(position).toString());
+                Log.i(TAG, adapter.getData().get(position).getWinningTeam());
+
+                if (holder == null) {
+                    Log.i(TAG, "Position: " + position + ", Fuck you");
+                } else if (((ListViewHolder) holder).mTextView == null) {
+                    Log.i(TAG, "Position: " + position + ", Fuck you twice");
+                } else {
+                    String winningTeam = adapter.getData().get(position).getWinningTeam();
+                    Log.i(TAG, "Position: " + position + ", winningTeam: " + winningTeam);
+                    ((ListViewHolder) holder).mTextView.setText(winningTeam);
+                }
             }
 
             @Override
-            public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-                return new ListViewHolder(getLayoutInflater().inflate(R.layout.single_item_row, viewGroup, false));
+            public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                Log.i(TAG, "ViewType: " + printViewTypes(viewType));
+                return new ListViewHolder(getLayoutInflater().inflate(
+                        R.layout.single_item_row, parent, false));
             }
 
             @Override
@@ -85,7 +88,7 @@ public class MainActivity extends ActionBarActivity {
 
     private List<Matches> populateData() {
         List<Matches> info = new ArrayList<>();
-        info.addAll(populateRoundRobinMatches());
+        // info.addAll(populateRoundRobinMatches());
         info.addAll(populateEliminationRoundMatches());
         return info;
     }
@@ -99,13 +102,18 @@ public class MainActivity extends ActionBarActivity {
         int[] team2Scores = getResources().getIntArray(R.array.team2scores);
         String[] winningTeam = getResources().getStringArray(R.array.matchwinners);
 
-        for (int i = 0; i < team1.length; i++) {
-            EliminationRound elimMatch = new EliminationRound();
-            elimMatch.setTeams(team1[i], team2[i]);
-            elimMatch.setTeamScores(team1Scores[i], team2Scores[i]);
-            elimMatch.setWinner(winningTeam[i]);
+        if (team1.length != team2.length || team1.length != team1Scores.length ||
+                team1.length != team2Scores.length || team1.length != winningTeam.length) {
+            throw new IllegalStateException("Matches are not proper");
+        }
 
-            eliminationRoundsList.add(elimMatch);
+        for (int i = 0; i < team1.length; i++) {
+            EliminationRound eliminationMatch = new EliminationRound();
+            eliminationMatch.setTeams(team1[i], team2[i]);
+            eliminationMatch.setTeamScores(team1Scores[i], team2Scores[i]);
+            eliminationMatch.setWinner(winningTeam[i]);
+
+            eliminationRoundsList.add(eliminationMatch);
         }
         return eliminationRoundsList;
     }
@@ -149,6 +157,21 @@ public class MainActivity extends ActionBarActivity {
         public ListViewHolder(View itemView) {
             super(itemView);
             mTextView = (TextView) findViewById(R.id.single_row_text);
+        }
+    }
+
+    private String printViewTypes(int viewType) {
+        switch (viewType) {
+            case ParallaxRecyclerAdapter.VIEW_TYPES.NORMAL:
+                return "NORMAL";
+            case ParallaxRecyclerAdapter.VIEW_TYPES.HEADER:
+                return "HEADER";
+            case ParallaxRecyclerAdapter.VIEW_TYPES.FIRST_VIEW:
+                return "FIRST_VIEW";
+            case ParallaxRecyclerAdapter.VIEW_TYPES.NORMAL_VIEW:
+                return "NORMAL_VIEW";
+            default:
+                return "";
         }
     }
 }

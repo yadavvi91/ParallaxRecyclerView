@@ -54,6 +54,7 @@
         <item>New Zealand</item>
         <item>New Zealand</item>
         <item>Australia</item>
+        <item>Australia</item>
     </array>
 
     <array name="team2">
@@ -105,6 +106,7 @@
         <item>West Indies</item>
         <item>South Africa</item>
         <item>India</item>
+        <item>New Zealand</item>
     </array>
 
     <array name="team1scores">
@@ -156,6 +158,7 @@
         <item>393</item>
         <item>299</item>
         <item>328</item>
+        <item>184</item>
     </array>
 
     <array name="team2scores">
@@ -207,6 +210,7 @@
         <item>250</item>
         <item>281</item>
         <item>233</item>
+        <item>183</item>
     </array>
 
     <array name="team1overs">
@@ -266,5 +270,58 @@
         <item>New Zealand</item>
         <item>New Zealand</item>
         <item>Australia</item>
+        <item>Australia</item>
     </array>
+
+    <string-array name="dates">
+        <item>14/02/15</item>
+        <item>14/02/15</item>
+        <item>15/02/15</item>
+        <item>15/02/15</item>
+        <item>16/02/15</item>
+        <item>17/02/15</item>
+        <item>18/02/15</item>
+        <item>19/02/15</item>
+        <item>20/02/15</item>
+        <item>21/02/15</item>
+        <item>21/02/15</item>
+        <item>22/02/15</item>
+        <item>22/02/15</item>
+        <item>23/02/15</item>
+        <item>24/02/15</item>
+        <item>25/02/15</item>
+        <item>26/02/15</item>
+        <item>26/02/15</item>
+        <item>27/02/15</item>
+        <item>28/02/15</item>
+        <item>28/02/15</item>
+        <item>01/03/15</item>
+        <item>01/03/15</item>
+        <item>03/03/15</item>
+        <item>04/03/15</item>
+        <item>04/03/15</item>
+        <item>05/03/15</item>
+        <item>06/03/15</item>
+        <item>07/03/15</item>
+        <item>07/03/15</item>
+        <item>08/03/15</item>
+        <item>08/03/15</item>
+        <item>09/03/15</item>
+        <item>10/03/15</item>
+        <item>11/03/15</item>
+        <item>12/03/15</item>
+        <item>13/03/15</item>
+        <item>13/03/15</item>
+        <item>14/03/15</item>
+        <item>14/03/15</item>
+        <item>15/03/15</item>
+        <item>15/03/15</item>
+        <item>18/03/15</item>
+        <item>19/03/15</item>
+        <item>20/03/15</item>
+        <item>21/03/15</item>
+        <item>24/03/15</item>
+        <item>26/03/15</item>
+        <item>29/03/15</item>
+    </string-array>
 </resources>

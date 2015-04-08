@@ -116,34 +116,38 @@ public class ParallaxRecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-        if (mRecyclerAdapterMethods == null)
+        if (mRecyclerAdapterMethods == null) {
             throw new NullPointerException("You must call implementRecyclerAdapterMethods");
-        if (position != 0 && mHeader != null) {
+        } else if (position != 0 && mHeader != null) {
             mRecyclerAdapterMethods.onBindViewHolder(holder, position - 1);
-        } else if (position != 0)
+        } else if (position != 0) {
             mRecyclerAdapterMethods.onBindViewHolder(holder, position);
-        if (mOnClickEvent != null)
+        }
+
+        if (mOnClickEvent != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     mOnClickEvent.onClick(v, position - (mHeader == null ? 0 : 1));
                 }
             });
+        }
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        if (mRecyclerAdapterMethods == null)
+        if (mRecyclerAdapterMethods == null) {
             throw new NullPointerException("You must call implementRecyclerAdapterMethods");
-        if (viewType == VIEW_TYPES.HEADER && mHeader != null)
+        } else if (viewType == VIEW_TYPES.HEADER && mHeader != null) {
             return new ViewHolder(mHeader);
-        if (viewType == VIEW_TYPES.FIRST_VIEW && mHeader != null && mRecyclerView != null) {
+        } else if (viewType == VIEW_TYPES.FIRST_VIEW && mHeader != null && mRecyclerView != null) {
             RecyclerView.ViewHolder holder = mRecyclerView.findViewHolderForPosition(0);
             if (holder != null) {
                 translateHeader(-holder.itemView.getTop());
                 mTotalYScrolled = -holder.itemView.getTop();
             }
         }
+
         return mRecyclerAdapterMethods.onCreateViewHolder(parent, viewType);
     }
 
